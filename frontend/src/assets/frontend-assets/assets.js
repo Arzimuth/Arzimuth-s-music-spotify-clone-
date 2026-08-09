@@ -79,14 +79,14 @@ export const albumsData = [
     },
     {   
         id:1,
-        name: "Top 50 India",
+        name: "Top 50 Thailand",
         image: img9,
         desc:"Your weekly update of the most played tracks",
         bgColor:"#22543d"
     },
     {   
         id:2,
-        name: "Trending India",
+        name: "Trending Thailand",
         image: img10,
         desc:"Your weekly update of the most played tracks",
         bgColor:"#742a2a"
@@ -125,7 +125,7 @@ export const songsData = [
     },
     {
         id:1,
-        name: "Song Two",
+        name: "Out of time",
         image: img2,
         file:song2,
         desc:"Put a smile on your face with these happy tunes",
