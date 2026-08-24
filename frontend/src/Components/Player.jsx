@@ -8,7 +8,7 @@ const Player = () => {
 const {track,seekBar,seekBg,play,pause,playStatus,time,formatTime,previous,next,seekSong}=useContext(PlayerContext)
 
 
-  return (
+  return track ? (
     <div className="h-[10%] bg-indigo-700 flex justify-between items-center text-white px-4">
         <div className="hidden lg:flex items-center gap-4">
 <img className="w-12" src={track.image}/>
@@ -35,7 +35,7 @@ const {track,seekBar,seekBg,play,pause,playStatus,time,formatTime,previous,next,
   <div ref={seekBg} onClick={seekSong} className="w-[60vw] max-w-[500px] bg-gray-300 rounded-full cursor-pointer">
     <hr ref={seekBar} className="h-1 border-none w-0 bg-indigo-400 rounded-full" />
   </div>
-  <p>{time.totalTime.minute}:{time.totalTime.second}</p>
+  <p>{formatTime(time.totalTime.minute)}:{formatTime(time.totalTime.second)}</p>
 </div>
         </div>
       <div className="hidden lg:flex items-center gap-2 opacity-75">
@@ -51,6 +51,6 @@ const {track,seekBar,seekBg,play,pause,playStatus,time,formatTime,previous,next,
         <img className="w-4" src={assets.zoom_icon}/>
       </div>
         </div>
-  )
+  ) : null
 }
 export default Player
